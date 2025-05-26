@@ -10,7 +10,7 @@ func NewFakeUserRepository() *FakeUserRepository {
 }
 
 func (r *FakeUserRepository) AddUser(name string) User {
-	user := User{ID: r.nextID, Name: "fake_" + name}
+	user := User{ID: r.nextID, Name: name}
 	r.nextID++
 	r.users = append(r.users, user)
 	return user

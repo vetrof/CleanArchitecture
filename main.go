@@ -10,12 +10,12 @@ import (
 
 func main() {
 	// real
-	//realRepo := repo.NewUserRepository()
-	//userService := service.NewUserService(realRepo)
+	realRepo := repo.NewUserRepository()
+	userService := service.NewUserService(realRepo)
 
 	// fake
-	fakeRepo := repo.NewFakeUserRepository()
-	userService := service.NewUserService(fakeRepo)
+	//fakeRepo := repo.NewFakeUserRepository()
+	//userService := service.NewUserService(fakeRepo)
 
 	handler := handlers.NewUserHandler(userService)
 
